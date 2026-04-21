@@ -1,23 +1,551 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>AfriTalent — Freelances</title>
- <!-- Bootstrap 5 via CDN : feuille de style -->
- <link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-rel="stylesheet">
- <!-- Votre feuille de style personnelle -->
- <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent —Freelances</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <!-- Le contenu de la page sera ajoute ici -->
- <!-- Bootstrap 5 via CDN : script JavaScript -->
- <script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script>
- <!-- Votre script JavaScript -->
- <script src="js/main.js"></script>
- </body>
+    <!-- Navigation Bootstrap commune a toutes les pages -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AfriTalent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Apropos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenu principal -->
+    <main class="container my-5">
+
+        <!-- FILTRE -->
+        <section class="mb-4">
+            <h2>Filtrer les freelances</h2>
+
+            <select id="filtreCategorie" class="form-select w-50">
+                <option value="all">Tous</option>
+                <option value="dev">Développement</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+            </select>
+        </section>
+
+        <!-- CATALOGUE -->
+        <section>
+            <div class="row">
+                <div class="row">
+                    <!-- PROFIL 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="dev">
+                        <div class="card">
+                            <img src="images/profil1.jpg" class="card-img-top photo-freelance" alt="Abdou Adam">
+                            <div class="card-body">
+                                <h5>Abdou Adam</h5>
+                                <p>Développeur Web</p>
+                                <p>Création de sites modernes.</p>
+                                <p><strong>24€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil1Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 1 -->
+                    <div class="modal fade" id="profil1Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Abdou Adam</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil1.jpg" class="img-fluid mb-3" alt="Abdou Adam">
+                                    <p><strong>Développeur Web</strong></p>
+                                    <p>Abdou est spécialisé dans la création de sites modernes, responsives et
+                                        performants avec HTML, CSS, JavaScript et frameworks récents.</p>
+                                    <p><strong>Tarif : 24€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="design">
+                        <div class="card">
+                            <img src="images/profil2.jpg" class="card-img-top photo-freelance" alt="Naila Ahmed">
+                            <div class="card-body">
+                                <h5>Naila Ahmed</h5>
+                                <p>Designer UI/UX</p>
+                                <p>Interfaces modernes.</p>
+                                <p><strong>30€/h</strong></p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil2Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 2 -->
+                    <div class="modal fade" id="profil2Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Naila Ahmed</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil2.jpg" class="img-fluid mb-3" alt="Naila Ahmed">
+                                    <p><strong>Designer UI/UX</strong></p>
+                                    <p>Naila conçoit des interfaces modernes, ergonomiques et esthétiques pour des
+                                        applications web et mobiles.</p>
+                                    <p><strong>Tarif : 30€/h</strong></p>
+                                    <p>⭐⭐⭐⭐⭐</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="marketing">
+                        <div class="card">
+                            <img src="images/profil3.jpg" class="card-img-top photo-freelance" alt="Amadou Sy">
+                            <div class="card-body">
+                                <h5>Amadou Sy</h5>
+                                <p>Marketing digital</p>
+                                <p>Stratégies efficaces.</p>
+                                <p><strong>22€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil3Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 3 -->
+                    <div class="modal fade" id="profil3Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Amadou Sy</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil3.jpg" class="img-fluid mb-3" alt="Amadou Sy">
+                                    <p><strong>Marketing digital</strong></p>
+                                    <p>Amadou crée des stratégies marketing performantes pour booster la visibilité et
+                                        les ventes en ligne.</p>
+                                    <p><strong>Tarif : 22€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="dev">
+                        <div class="card">
+                            <img src="images/profil4.jpg" class="card-img-top photo-freelance" alt="Samuel Pascal">
+                            <div class="card-body">
+                                <h5>Samuel Pascal</h5>
+                                <p>Développeur mobile</p>
+                                <p>Applications mobiles.</p>
+                                <p><strong>26€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil4Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 4 -->
+                    <div class="modal fade" id="profil4Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Samuel Pascal</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil4.jpg" class="img-fluid mb-3" alt="Samuel Pascal">
+                                    <p><strong>Développeur mobile</strong></p>
+                                    <p>Samuel crée des applications mobiles intuitives, rapides et adaptées aux besoins
+                                        des utilisateurs.</p>
+                                    <p><strong>Tarif : 26€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROFIL 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="design">
+                        <div class="card">
+                            <img src="images/profil5.jpg" class="card-img-top photo-freelance" alt="Rosali Diop">
+                            <div class="card-body">
+                                <h5>Rosali Diop</h5>
+                                <p>Graphiste</p>
+                                <p>Création de logos.</p>
+                                <p><strong>23€/h</strong></p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil5Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 5 -->
+                    <div class="modal fade" id="profil5Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Rosali Diop</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil5.jpg" class="img-fluid mb-3" alt="Rosali Diop">
+                                    <p><strong>Graphiste</strong></p>
+                                    <p>Rosali crée des logos uniques et modernes pour renforcer l’identité visuelle des
+                                        entreprises.</p>
+                                    <p><strong>Tarif : 23€/h</strong></p>
+                                    <p>⭐⭐⭐⭐⭐</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="marketing">
+                        <div class="card">
+                            <img src="images/profil6.jpg" class="card-img-top photo-freelance" alt="Babacar Diallo">
+                            <div class="card-body">
+                                <h5>Babacar Diallo</h5>
+                                <p>Community Manager</p>
+                                <p>Gestion des réseaux sociaux.</p>
+                                <p><strong>16€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil6Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 6 -->
+                    <div class="modal fade" id="profil6Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Babacar Diallo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil6.jpg" class="img-fluid mb-3" alt="Babacar Diallo">
+                                    <p><strong>Community Manager</strong></p>
+                                    <p>Babacar gère les réseaux sociaux et développe l’engagement des communautés pour
+                                        les marques.</p>
+                                    <p><strong>Tarif : 16€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 7 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="dev">
+                        <div class="card">
+                            <img src="images/profil7.jpg" class="card-img-top photo-freelance" alt="Ibrahim Abdou">
+                            <div class="card-body">
+                                <h5>Ibrahim Abdou</h5>
+                                <p>Développeur Full Stack</p>
+                                <p>Front-end et back-end.</p>
+                                <p><strong>35€/h</strong></p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil7Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 7 -->
+                    <div class="modal fade" id="profil7Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Ibrahim Abdou</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil7.jpg" class="img-fluid mb-3" alt="Ibrahim Abdou">
+                                    <p><strong>Développeur Full Stack</strong></p>
+                                    <p>Ibrahim développe des applications complètes avec front-end et back-end pour des
+                                        projets web complexes.</p>
+                                    <p><strong>Tarif : 35€/h</strong></p>
+                                    <p>⭐⭐⭐⭐⭐</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 8 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="design">
+                        <div class="card">
+                            <img src="images/profil8.jpg" class="card-img-top photo-freelance" alt="Maria Vitalina">
+                            <div class="card-body">
+                                <h5>Maria Vitalina</h5>
+                                <p>Illustratrice</p>
+                                <p>Illustrations créatives.</p>
+                                <p><strong>25€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil8Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 8 -->
+                    <div class="modal fade" id="profil8Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Maria Vitalina</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil8.jpg" class="img-fluid mb-3" alt="Maria Vitalina">
+                                    <p><strong>Illustratrice</strong></p>
+                                    <p>Maria réalise des illustrations originales et créatives pour tous types de
+                                        supports.</p>
+                                    <p><strong>Tarif : 25€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 9 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="marketing">
+                        <div class="card">
+                            <img src="images/profil9.jpg" class="card-img-top photo-freelance" alt="Cheikh Amadou">
+                            <div class="card-body">
+                                <h5>Cheikh Amadou</h5>
+                                <p>Expert SEO</p>
+                                <p>Optimisation Google.</p>
+                                <p><strong>21€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil9Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 9 -->
+                    <div class="modal fade" id="profil9Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Cheikh Amadou</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil9.jpg" class="img-fluid mb-3" alt="Cheikh Amadou">
+                                    <p><strong>Expert SEO</strong></p>
+                                    <p>Cheikh optimise les sites web pour le référencement et améliore la visibilité sur
+                                        Google.</p>
+                                    <p><strong>Tarif : 21€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 10 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="dev">
+                        <div class="card">
+                            <img src="images/profil10.jpg" class="card-img-top photo-freelance" alt="Abdoulaye Mbaye">
+                            <div class="card-body">
+                                <h5>Abdoulaye Mbaye</h5>
+                                <p>Développeur Front-end</p>
+                                <p>Interfaces web dynamiques et modernes.</p>
+                                <p><strong>29€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil10Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 10 -->
+                    <div class="modal fade" id="profil10Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Abdoulaye Mbaye</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil10.jpg" class="img-fluid mb-3" alt="Abdoulaye Mbaye">
+                                    <p><strong>Développeur Front-end</strong></p>
+                                    <p>Abdoulaye crée des interfaces web modernes et dynamiques, optimisées pour
+                                        l’expérience utilisateur.</p>
+                                    <p><strong>Tarif : 29€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 11 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="design">
+                        <div class="card">
+                            <img src="images/profil11.jpg" class="card-img-top photo-freelance" alt="Koda Ba">
+                            <div class="card-body">
+                                <h5>Koda Ba</h5>
+                                <p>Web Designer</p>
+                                <p>Création de sites élégants et modernes.</p>
+                                <p><strong>27€/h</strong></p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil11Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 11 -->
+                    <div class="modal fade" id="profil11Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Koda Ba</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil11.jpg" class="img-fluid mb-3" alt="Koda Ba">
+                                    <p><strong>Web Designer</strong></p>
+                                    <p>Koda crée des sites web élégants et modernes, optimisés pour le design et
+                                        l’expérience utilisateur.</p>
+                                    <p><strong>Tarif : 27€/h</strong></p>
+                                    <p>⭐⭐⭐⭐⭐</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROFIL 12 -->
+                    <div class="col-lg-4 col-md-6 mb-4 freelance-card" data-categorie="marketing">
+                        <div class="card">
+                            <img src="images/profil12.jpg" class="card-img-top photo-freelance" alt="Mohamed Ali">
+                            <div class="card-body">
+                                <h5>Mohamed Ali</h5>
+                                <p>Spécialiste Ads</p>
+                                <p>Campagnes publicitaires performantes.</p>
+                                <p><strong>23€/h</strong></p>
+                                <p>⭐⭐⭐⭐☆</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#profil12Modal">Voir le profil</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal PROFIL 12 -->
+                    <div class="modal fade" id="profil12Modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Mohamed Ali</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="images/profil12.jpg" class="img-fluid mb-3" alt="Mohamed Ali">
+                                    <p><strong>Spécialiste Ads</strong></p>
+                                    <p>Mohamed gère des campagnes publicitaires performantes sur Google et les réseaux
+                                        sociaux pour maximiser les résultats.</p>
+                                    <p><strong>Tarif : 23€/h</strong></p>
+                                    <p>⭐⭐⭐⭐☆</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+    </main>
+    <!-- Pied de page -->
+    <footer>
+        <div class="container py-4">
+            <p>&copy; 2025 AfriTalent. Tous droits reserves.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
