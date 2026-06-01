@@ -528,3 +528,101 @@ h1 {
     font-size: 1.2rem;
   }
 }
+/* =========================================
+   1. DARK MODE 
+========================================= */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+/* Forcer les fonds clairs de Bootstrap à devenir sombres */
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .bg-white,
+body.dark-mode .service-card,
+body.dark-mode .bento-card,
+body.dark-mode .modal-content {
+    background-color: #2b2b2b !important;
+    color: #f8f9fa !important;
+    border-color: #444;
+} 
+ 
+/* Force le fond du hero en mode sombre */
+body.dark-mode #hero {
+    background-color: #1e1e1e !important;
+}
+
+/* Comportement du hero par defau */
+#hero {
+    background-color: rgb(116, 59, 97);
+    transition: backdround-colore 0.3s ease;
+}
+
+/* =========================================
+   2. Effet au scoll sur la navbar (shrink)
+========================================= */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar.navbar-scrolled {
+    padding-top: 0.5rem; /* Effet shrink (réduction du padding) */
+    padding-bottom: 0.5rem;
+    background-color: rgba(33, 37, 41, 0.95) !important; /* Légère transparence */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    backdrop-filter: blur(5px);
+}
+
+/* =========================================
+   3. Bouton retour en haut
+========================================= */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd; /* Couleur primaire Bootstrap */
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;           /* Masqué par défaut */
+    visibility: hidden;   /* Non cliquable quand masqué */
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Remonte légèrement lors de l'apparition */
+}
+
+#backToTop:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-5px); /* Petit bond au survol */
+}
+/* =========================================
+   Couleur de la section hero
+========================================= */
+/* 1. Mode Clair (Violet par défaut) */
+#hero {
+    background-color: rgb(116, 59, 97);
+    transition: background-color 0.3s ease; /* Pour un changement de couleur fluide */
+}
+
+/* 2. Mode Sombre (Gris foncé) */
+body.dark-mode #hero {
+    background-color: #1e1e1e !important;
+}
