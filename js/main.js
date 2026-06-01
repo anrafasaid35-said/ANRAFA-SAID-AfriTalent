@@ -67,3 +67,61 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. Injection du CSS ---
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    `;
+    document.head.appendChild(style);
+
+    // --- 2. Observer ---
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animation de fondu
+                if (entry.target.classList.contains("fade-in-section")) {
+                    entry.target.classList.add("is-visible");
+                }
+                // Animation des compteurs
+                if (entry.target.classList.contains("counter")) {
+                    const target = parseInt(entry.target.getAttribute("data-target"), 10);
+                    let count = 0;
+                    const increment = target / 50; 
+                    const timer = setInterval(() => {
+                        count += increment;
+                        if (count >= target) {
+                            entry.target.textContent = target;
+                            clearInterval(timer);
+                        } else {
+                            entry.target.textContent = Math.floor(count);
+                        }
+                    }, 30);
+                }
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // --- 3. Ciblage dynamique ---
+    // Appliquer aux sections
+    document.querySelectorAll("main > section").forEach(section => {
+        section.classList.add("fade-in-section");
+        observer.observe(section);
+    });
+
+    // Appliquer aux compteurs (vérifiez bien que vos nombres ont la classe "counter")
+    document.querySelectorAll(".counter").forEach(counter => {
+        observer.observe(counter);
+    });
+});
