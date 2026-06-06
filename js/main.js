@@ -125,3 +125,103 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(counter);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Création d'un élément modal "page entière" 
+    const modal = document.createElement('div');
+    modal.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:white; display:none; z-index:9999; padding:50px; overflow-y:auto;";
+    document.body.appendChild(modal);
+
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const terme = e.target.value.toLowerCase().trim();
+            const articles = document.querySelectorAll('.article-card');
+            let match = null;
+
+            articles.forEach(art => {
+                if (art.querySelector('.card-title').innerText.toLowerCase().includes(terme)) {
+                    match = art;
+                }
+            });
+
+            if (match) {
+                // Copie le contenu de la carte dans la modale plein écran
+                modal.innerHTML = `
+                    <button onclick="this.parentElement.style.display='none'" style="float:right;">Fermer</button>
+                    <div style="max-width:800px; margin:auto;">
+                        ${match.innerHTML}
+                    </div>
+                `;
+                modal.style.display = 'block';
+            } else {
+                alert("Article non trouvé !");
+            }
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filtre = document.getElementById('filtreCategorie');
+    const cartes = document.querySelectorAll('.freelance-card');
+
+    filtre.addEventListener('change', (e) => {
+        const categorieChoisie = e.target.value;
+
+        cartes.forEach(carte => {
+            const categorieCarte = carte.getAttribute('data-categorie');
+            if (categorieChoisie === 'all' || categorieCarte === categorieChoisie) {
+                carte.style.display = 'block';
+            } else {
+                carte.style.display = 'none';
+            }
+        });
+    });
+});
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let estValide = true;
+
+    // Nettoyage des erreurs précédentes
+    document.querySelectorAll('.error-msg').forEach(el => el.remove());
+
+    // Vérification des champs requis
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            afficherErreur(input, "Ce champ est requis.");
+            estValide = false;
+        }
+    });
+
+    // Validation Email (Regex)
+    const email = document.getElementById('email');
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.value && !regexEmail.test(email.value)) {
+        afficherErreur(email, "Format email invalide.");
+        estValide = false;
+    }
+
+    // Validation longueur message (min 20)
+    const message = document.getElementById('message');
+    if (message.value && message.value.length < 20) {
+        afficherErreur(message, "Le message doit contenir au moins 20 caractères.");
+        estValide = false;
+    }
+
+    if (estValide) {
+        alert("Message envoyé avec succès !");
+        form.reset();
+    }
+});
+
+function afficherErreur(element, message) {
+    const erreur = document.createElement('div');
+    erreur.className = 'error-msg text-danger small';
+    erreur.innerText = message;
+    element.parentNode.appendChild(erreur);
+}

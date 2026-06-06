@@ -4,29 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent —Freelances</title>
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-    <!-- Navigation Bootstrap commune a toutes les pages -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">AfriTalent</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Apropos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo-afritalent.png" alt="AfriTalent Logo" height="40">
+                    AfriTalent
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    
+
+                    <li class="nav-item ms-2">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#inscriptionModal">
+                                Rejoindre AfriTalent
+                            </button>
+                    </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+             <button id="theme-toggle" class="btn btn-outline-light">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+        </nav>
+    </header>
     <!-- Contenu principal -->
     <main class="container my-5">
 
@@ -277,10 +302,14 @@
                     <p><strong>Tarif : 24€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+        <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221774953466" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -302,10 +331,14 @@
                     <p><strong>Tarif : 30€/h</strong></p>
                     <p>⭐⭐⭐⭐⭐</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221773203395" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -327,10 +360,14 @@
                     <p><strong>Tarif : 22€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221774456457" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -352,10 +389,14 @@
                     <p><strong>Tarif : 26€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221773324896" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -377,10 +418,14 @@
                     <p><strong>Tarif : 23€/h</strong></p>
                     <p>⭐⭐⭐⭐⭐</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221773453156" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -402,10 +447,14 @@
                     <p><strong>Tarif : 16€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221778905632" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -427,10 +476,14 @@
                     <p><strong>Tarif : 35€/h</strong></p>
                     <p>⭐⭐⭐⭐⭐</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221775438977" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -452,10 +505,14 @@
                     <p><strong>Tarif : 25€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221773053443" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -477,10 +534,14 @@
                     <p><strong>Tarif : 21€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221773495346" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div> 
@@ -502,10 +563,14 @@
                     <p><strong>Tarif : 29€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/221776953556" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -527,10 +592,14 @@
                     <p><strong>Tarif : 27€/h</strong></p>
                     <p>⭐⭐⭐⭐⭐</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                 <div class="modal-footer d-flex justify-content-between align-items-center">
+            
+            <a href="https://wa.me/2217759534670" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
             </div>
         </div>
     </div>
@@ -552,10 +621,14 @@
                     <p><strong>Tarif : 23€/h</strong></p>
                     <p>⭐⭐⭐⭐☆</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fermer</button>
-                </div>
+                    <div class="modal-footer d-flex justify-content-between align-items-center">
+                
+                <a href="https://wa.me/221774553467" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>   
             </div>
         </div>
     </div>
@@ -566,6 +639,9 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script src="js/main.js"></script>
+
+    <button id="backToTop">↑</button>
 </body>
 </html>

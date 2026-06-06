@@ -54,13 +54,19 @@ h1 {
     box-shadow: var(--nav-shadow);
     padding: 0.8rem 5%;
 }
+body {
+    /* La navbar Bootstrap par défaut fait environ 56px à 70px de hauteur */
+    padding-top: 75px; 
+}
+
+
 
 /* LOGO */
 .navbar-brand {
     color: var(--primary-color);
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.6rem;
+    font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -86,6 +92,7 @@ h1 {
     margin-left: 2rem;
     border-radius: 5px;
 }
+
 /* =========================================
    HERO SECTION
 ========================================= */
@@ -625,4 +632,13 @@ body.dark-mode #hero {
 /* 2. Mode Sombre (Gris foncé) */
 body.dark-mode #hero {
     background-color: #1e1e1e !important;
+}
+/* Style spécifique pour l'image de la section histoire */
+.img-histoire {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+    
 }
