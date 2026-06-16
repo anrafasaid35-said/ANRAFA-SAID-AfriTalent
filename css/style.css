@@ -7,27 +7,38 @@
    2. VARIABLES CSS 
    ======================= */
 :root {
+    /*Couleur principale */
     --primary-color: #2563eb;
+    /*Couleur Secondaire */
     --secondary-color: #f59e0b;
+     /* Couleur sombre du site */
     --dark-color: #1e293b;
+    /* Couleur claire du site */
     --light-color: #f8fafc;
 
+    /* Police utilisée pour les titres */
     --font-heading: 'Poppins', sans-serif;
+
+    /* Police utilisée pour le texte */
     --font-body: 'Roboto', sans-serif;
 
+    /* Espacement principal */
     --main-spacing: 1.5rem;
+
+      /* Ombre de la barre de navigation */
     --nav-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* ============
    3. RESET CSS 
    ============ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+   /* Réinitialisation globale du modèle de boîte */
 
+* {
+    box-sizing: border-box;
+}s
+
+/* Style général du corps de la page */
 body {
     font-family: var(--font-body);
     background-color: var(--light-color);
@@ -38,6 +49,8 @@ body {
 /* ==========================
    4. TITRE PRINCIPAL (H1)
    ========================== */
+   
+   /* Style du titre principal */
 h1 {
     line-height: 1.3;
     font-size: clamp(1.8rem, 5vw, 3.5rem);
@@ -49,19 +62,24 @@ h1 {
 /* =============================
    5. NAVBAR STYLISÉE ET ALIGNÉE 
    ============================= */
+
+   /* Style principal de la barre de navigation */
 .navbar {
     background-color: #ffffff00;
     box-shadow: var(--nav-shadow);
     padding: 0.8rem 5%;
-}
+} 
+
+/* Ajoute un espace en haut pour éviter que la navbar masque le contenu */
 body {
     /* La navbar Bootstrap par défaut fait environ 56px à 70px de hauteur */
     padding-top: 75px; 
 }
 
 
-
 /* LOGO */
+
+/* Style du logo de la navbar */
 .navbar-brand {
     color: var(--primary-color);
     font-family: var(--font-heading);
@@ -72,6 +90,9 @@ body {
 }
 
 /* LIENS MENU */
+
+/* Style des liens du menu */
+
 .navbar-nav .nav-link {
     color:white;
     font-weight: 500;
@@ -82,6 +103,8 @@ body {
 /* ==================
    6. BOUTON PRIMARY
    ================== */
+
+   /* Personnalisation du bouton principal */
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
@@ -97,6 +120,7 @@ body {
    HERO SECTION
 ========================================= */
 
+/* Section principale d'accueil */
 .hero-section {
     position: relative;
 
@@ -116,6 +140,7 @@ body {
     overflow: hidden;
 }
 
+/* Conteneur du contenu Hero */
 .hero-section .container {
     position: relative;
     z-index: 2;
@@ -124,6 +149,7 @@ body {
 
 /* Decorative circles */
 
+/* Création des cercles décoratifs */
 .hero-section::before,
 .hero-section::after {
     content: "";
@@ -133,6 +159,7 @@ body {
     border-radius: 50%;
 }
 
+/* Cercle décoratif supérieur droit */
 .hero-section::before {
     width: 300px;
     height: 300px;
@@ -143,6 +170,7 @@ body {
     background: rgba(255,255,255,0.05);
 }
 
+/* Cercle décoratif inférieur gauche */
 .hero-section::after {
     width: 250px;
     height: 250px;
@@ -155,6 +183,7 @@ body {
 
 /* Hero content */
 
+/* Style du titre Hero */
 .hero-section h1 {
     margin: 40px 0 25px;
 
@@ -165,6 +194,7 @@ body {
     font-weight: 800;
 }
 
+/* Texte descriptif Hero */
 .hero-section .lead {
     max-width: 750px;
 
@@ -173,6 +203,7 @@ body {
     font-size: 1.3rem;
 }
 
+/* Boutons Hero */
 .hero-section .btn {
     padding: 14px 28px;
 
@@ -181,6 +212,7 @@ body {
     transition: var(--transition);
 }
 
+/* Animation au survol du bouton */
 .hero-section .btn:hover {
     transform: translateY(-5px);
 }
@@ -189,10 +221,12 @@ body {
    STATS
 ========================================= */
 
+/* Marge supérieure de la section statistiques */
 #stats {
     margin-top: 60px;
 }
 
+/* Valeurs statistiques */
 #stats h3 {
     font-size: 2.2rem;
 
@@ -203,6 +237,7 @@ body {
    COMMENT ÇA MARCHE
 ========================================= */
 
+/* Section explicative */
 #coment-ca-marche {
     padding: 80px 5%;
 
@@ -211,6 +246,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Titre de la section */
 #coment-ca-marche h2 {
     text-align: center;
 
@@ -227,6 +263,7 @@ body {
    BENTO GRID
 ========================================= */
 
+/* Grille Bento */
 #coment-ca-marche .bento-grid {
     display: grid;
 
@@ -235,20 +272,22 @@ body {
     gap: 35px;
 }
 
-/* Layout asymétrique desktop */
-
+/* Première carte plus large */
 #coment-ca-marche .bento-grid > :nth-child(1) {
     grid-column: span 3;
 }
 
+/* Deuxième carte */
 #coment-ca-marche .bento-grid > :nth-child(2) {
     grid-column: span 2;
 }
 
+/* Troisième carte */
 #coment-ca-marche .bento-grid > :nth-child(3) {
     grid-column: span 2;
 }
 
+/* Quatrième carte */
 #coment-ca-marche .bento-grid > :nth-child(4) {
     grid-column: span 3;
 }
@@ -257,6 +296,7 @@ body {
    CARTES
 ========================================= */
 
+/* Carte Bento */
 #coment-ca-marche .bento-card {
     background: linear-gradient(145deg, #ffffff, #f8f8f8);
 
@@ -277,7 +317,7 @@ body {
     overflow: hidden;
 }
 
-/* Couleurs spéciales */
+/* Couleurs spéciales des cartes 1 et 4 */ 
 
 #coment-ca-marche .item-1,
 #coment-ca-marche .item-4 {
@@ -286,21 +326,20 @@ body {
     color: white;
 }
 
+/* Couleurs des cartes 2 et 3 */
 #coment-ca-marche .item-2,
 #coment-ca-marche .item-3 {
     background: white;
 }
 
 /* Hover */
-
 #coment-ca-marche .bento-card:hover {
     transform: translateY(-10px);
 
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* Icônes */
-
+/* Icônes des cartes */
 #coment-ca-marche .bento-card i {
     font-size: 2rem;
 
@@ -309,8 +348,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Titres */
-
+/* Titres des cartes */
 #coment-ca-marche .bento-card h3 {
     margin-top: 15px;
 
@@ -319,8 +357,7 @@ body {
     font-weight: 700;
 }
 
-/* Texte */
-
+/* Texte des cartes */
 #coment-ca-marche .bento-card p {
     color: #475569;
 
@@ -348,6 +385,7 @@ body {
    SERVICES
 ========================================= */
 
+/* Carte de service */
 .service-card {
     border-radius: 20px;
 
@@ -356,6 +394,7 @@ body {
     cursor: pointer;
 }
 
+/* Icônes présentes dans les cartes de services */
 .service-card i {
     color: #743b61;
 
@@ -364,12 +403,14 @@ body {
 
 /* Hover services */
 
+/* Animation au survol d'une carte */
 .hover-effect:hover {
     transform: translateY(-10px);
 
     box-shadow: 0 18px 35px rgba(0,0,0,0.15);
 }
 
+/* Agrandissement de l'icône au survol */
 .hover-effect:hover i {
     transform: scale(1.1);
 }
@@ -378,6 +419,7 @@ body {
    TÉMOIGNAGES
 ========================================= */
 
+/* Section témoignages */
 #testimonials {
     background-color: #ffffff;
 }
@@ -386,6 +428,7 @@ body {
     padding: 30px;
 }
 
+/* Images des témoignages */
 .carousel-item img {
     width: 200px;
     height: 200px;
@@ -395,6 +438,7 @@ body {
     border: 5px solid #f1f1f1;
 }
 
+/* Icônes précédent et suivant du carrousel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0,0,0,0.4);
@@ -408,22 +452,27 @@ body {
    RESPONSIVE TABLET
 ========================================= */
 
+/* Adaptation pour les tablettes */
 @media (max-width: 992px) {
 
+    /* Passage de la grille Bento à 2 colonnes */
     #coment-ca-marche .bento-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     /* Reset des spans */
 
+       /* Toutes les cartes occupent une seule colonne */
     #coment-ca-marche .bento-grid > * {
         grid-column: span 1 !important;
     }
 
+    /* Réduction de la taille du titre Hero */
     .hero-section h1 {
         font-size: 3rem;
     }
 
+    /* Réduction de la taille des statistiques */
     #stats h3 {
         font-size: 1.8rem;
     }
@@ -433,42 +482,52 @@ body {
    RESPONSIVE MOBILE
 ========================================= */
 
+/* Adaptation pour les mobiles */
 @media (max-width: 768px) {
 
+    /* Réduction des espacements du Hero */
     .hero-section {
         padding: 180px 20px 100px;
     }
 
+    /* Taille du titre Hero */
     .hero-section h1 {
         font-size: 2.5rem;
     }
 
+    /* Taille du texte descriptif Hero */
     .hero-section .lead {
         font-size: 1rem;
     }
 
+ /* Espacement de la section Comment ça marche */
     #coment-ca-marche {
         padding: 60px 20px;
     }
 
+     /* Taille du titre de section */
     #coment-ca-marche h2 {
         font-size: 2.2rem;
     }
 
+     /* Une seule colonne sur mobile */
     #coment-ca-marche .bento-grid {
         grid-template-columns: 1fr;
     }
 
     /* Reset des spans */
 
+    /* Chaque carte occupe toute la largeur */
     #coment-ca-marche .bento-grid > * {
         grid-column: span 1 !important;
     }
 
+    /* Réduction du padding des cartes */
     #coment-ca-marche .bento-card {
         padding: 25px;
     }
 
+     /* Réduction de la taille des images du carrousel */
     .carousel-item img {
         width: 150px;
         height: 150px;
@@ -477,28 +536,34 @@ body {
 /* Version mobile */
 @media (max-width: 767px) {
 
+/* Taille générale du texte */
   body {
     font-size: 14px;
   }
 
+  /* Titre Hero */
   .hero-title {
     font-size: 1.8rem;
     text-align: center;
   }
 
+  /* Texte Hero */
   .hero-text {
     font-size: 1rem;
   }
 
+/* Centrage du menu */
   .navbar-nav {
     text-align: center;
   }
 
+   /* Espacement des liens du menu */
   .nav-link {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
+  /* Espacement entre les cartes */
   .card {
     margin-bottom: 20px;
   }
@@ -507,14 +572,17 @@ body {
 /* Version tablette */
 @media (min-width: 768px) and (max-width: 1199px) {
 
+/* Taille générale du texte */
   body {
     font-size: 16px;
   }
 
+   /* Titre Hero */
   .hero-title {
     font-size: 2.5rem;
   }
 
+   /* Texte Hero */
   .hero-text {
     font-size: 1.1rem;
   }
@@ -523,14 +591,17 @@ body {
 /* Version ordinateur */
 @media (min-width: 1200px) {
 
+     /* Taille générale du texte */
   body {
     font-size: 18px;
   }
 
+  /* Titre Hero */
   .hero-title {
     font-size: 3rem;
   }
 
+  /* Texte Hero */
   .hero-text {
     font-size: 1.2rem;
   }
@@ -538,16 +609,20 @@ body {
 /* =========================================
    1. DARK MODE 
 ========================================= */
+
+/* Mode sombre global */
 body.dark-mode {
     background-color: #121212;
     color: #f8f9fa;
 }
+
 
 /* Forcer les fonds clairs de Bootstrap à devenir sombres */
 body.dark-mode .bg-light {
     background-color: #1e1e1e !important;
 }
 
+/* Adaptation des cartes et fenêtres modales en mode sombre */
 body.dark-mode .bg-white,
 body.dark-mode .service-card,
 body.dark-mode .bento-card,
@@ -571,23 +646,28 @@ body.dark-mode #hero {
 /* =========================================
    2. Effet au scoll sur la navbar (shrink)
 ========================================= */
+
+/* Animation de la navbar */
 .navbar {
     transition: all 0.3s ease-in-out;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+/* Navbar réduite après défilement */
 .navbar.navbar-scrolled {
     padding-top: 0.5rem; /* Effet shrink (réduction du padding) */
     padding-bottom: 0.5rem;
     background-color: rgba(33, 37, 41, 0.95) !important; /* Légère transparence */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* Ombre portée */
 }
 
 /* =========================================
    3. Bouton retour en haut
 ========================================= */
+
+/* Bouton flottant de retour en haut */
 #backToTop {
     position: fixed;
     bottom: 30px;
@@ -610,12 +690,14 @@ body.dark-mode #hero {
     cursor: pointer;
 }
 
+/* Affichage du bouton lorsqu'il est activé */
 #backToTop.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0); /* Remonte légèrement lors de l'apparition */
 }
 
+/* Effet au survol */
 #backToTop:hover {
     background-color: #0b5ed7;
     transform: translateY(-5px); /* Petit bond au survol */
@@ -623,6 +705,7 @@ body.dark-mode #hero {
 /* =========================================
    Couleur de la section hero
 ========================================= */
+
 /* 1. Mode Clair (Violet par défaut) */
 #hero {
     background-color: rgb(116, 59, 97);
@@ -641,4 +724,21 @@ body.dark-mode #hero {
     object-fit: cover;
     display: block;
     
+}
+
+/* =========================================================================
+   CORRECTIF RESPONSIVE : MODAL D'INSCRIPTION (Avis Commit 9)
+   ========================================================================= */
+
+   /* Fenêtre modale */
+.modal-content {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    height: auto !important; /* Force la boîte blanche à s'adapter au formulaire */
+}
+
+/* Corps de la fenêtre modale */
+.modal-body {
+    padding: 2rem !important; /* Restaure l'espace de sécurité interne Bootstrap */
+    height: auto !important;
 }

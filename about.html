@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent — À propos</title>
-       <!-- Google Fonts -->
+       <!-- POLICES DE CARACTÈRES (Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600;800&display=swap"
         rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -92,7 +92,7 @@
                         <div class="card  h-100 shadow-sm">
                             <img src="images/membre1.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"  alt="Saratou Dialo">
                             <div class="card-body">
-                                <h5>Saratou Dialo</h5>
+                                <h3 class="h5">Saratou Dialo</h3>
                                 <p>CEO</p>
                                 <a href="#">LinkedIn</a>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="card h-100 shadow-sm">
                             <img src="images/membre2.jpg" class="card-img-top" style="height: 250px; object-fit: cover;"   alt="Moussa Diop">
                             <div class="card-body">
-                                <h5>Moussa Diop</h5>
+                                <h3 class="h5">Moussa Diop</h3>
                                 <p>CTO</p>
                                 <a href="#">LinkedIn</a>
                             </div>
@@ -114,7 +114,7 @@
                         <div class="card h-100 shadow-sm">
                             <img src="images/membre3.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Aicha Bakar">
                             <div class="card-body">
-                                <h5>Aicha Bakar</h5>
+                                <h3 class="h5">Aicha Bakar</h3>
                                 <p>Responsable Marketing</p>
                                 <a href="#">LinkedIn</a>
                             </div>
@@ -125,7 +125,7 @@
                         <div class="card  h-100 shadow-sm">
                             <img src="images/membre4.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Ali youssef">
                             <div class="card-body">
-                                <h5>Ali youssef</h5>
+                                <h3 class="h5">Ali youssef</h3>
                                 <p>Designer UX/UI</p>
                                 <a href="#">LinkedIn</a>
                             </div>
@@ -145,25 +145,25 @@
 
                     <div class="col-md-3">
                         <i class="bi bi-lightbulb fs-1"></i>
-                        <h4>Innovation</h4>
+                        <h3 class="h4">Innovation</h3>
                         <p>Nous encourageons la créativité et les nouvelles idées.</p>
                     </div>
 
                     <div class="col-md-3">
                         <i class="bi bi-globe fs-1"></i>
-                        <h4>Accessibilité</h4>
+                        <h3 class="h4">Accessibilité</h3>
                         <p>Nous rendons les opportunités accessibles à tous.</p>
                     </div>
 
                     <div class="col-md-3">
                         <i class="bi bi-people fs-1"></i>
-                        <h4>Communauté</h4>
+                        <h3 class="h4">Communauté</h3>
                         <p>Nous favorisons la collaboration entre talents africains.</p>
                     </div>
 
                     <div class="col-md-3">
                         <i class="bi bi-star fs-1"></i>
-                        <h4>Excellence</h4>
+                        <h3 class="h4">Excellence</h3>
                         <p>Nous visons la qualité dans chaque projet.</p>
                     </div>
 
@@ -178,30 +178,23 @@
 
                 <div class="row text-center">
                     <div class="col-md-3">
-                        <h3>
                             <span class="counter" data-target="1200"></span>+
-                        </h3>
                         <p>Freelances</p>
                     </div>
 
                     <div class="col-md-3">
-                        <h3>
                           <span class="counter" data-target="45"></span>  
-                        </h3>
+                        
                         <p>Pays représentés</p>
                     </div>
 
                     <div class="col-md-3">
-                        <h3>
                             <span class="counter" data-target="3800"></span>+  
-                        </h3>
                         <p>Projets réalisés</p>
                     </div>
 
                     <div class="col-md-3">
-                        <h3>
                             <span class="counter" data-target= "98%"></span> 
-                        </h3>
                         <p>Satisfaction client</p>
                     </div>
                 </div>
@@ -216,12 +209,57 @@
             <p>&copy; 2025 AfriTalent. Tous droits réservés.</p>
         </div>
     </footer>
+    <!-- ==================================
+         FENETRES MODALES (Popups)
+         ================================== -->
+     <!--Modal Inscription-->
+<div class="modal fade" id="inscriptionModal" tabindex="-1" role="dialog" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+        <!-- L'ajout de h-auto garantit que la boîte blanche s'adapte au formulaire -->
+        <div class="modal-content h-auto border-0 shadow">
+            <div class="modal-header border-0 pb-0">
+                <h3 class="modal-title fw-bold h5" id="inscriptionModalLabel">Inscription AfriTalent</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body h-auto p-4">
+                <!-- Formulaire d'inscription -->
+                <form id="inscriptionForm">
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label fw-semibold">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nom" class="form-label fw-semibold">Nom</label>
+                        <input type="text" class="form-control" id="nom" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-semibold">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="motdepasse" class="form-label fw-semibold">Mot de passe</label>
+                        <input type="password" class="form-control" id="motdepasse" required>
+                    </div>
+                    <div class="w-100 m-0 p-0">
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold m-0">S'inscrire</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- JS -->
+<!-- =================================
+         SCRIPTS ET CONFIGURATIONS FINALES
+         ==================================-->
+    <!-- Framework Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Script JavaScript applicatif global -->
     <script src="js/main.js"></script>
 
+    <!-- Bouton de retour rapide vers le haut de la page -->
     <button id="backToTop">↑</button>
 </body>
 </html>
